@@ -1,11 +1,24 @@
 package org.example;
 
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class MyCalculatorTest {
-    private MyCalculator myCalculator=new MyCalculator();
+    MyCalculator myCalculator;
+    @BeforeEach
+    void setUpMyCalculator(){
+        myCalculator=new MyCalculator();
+        System.out.println("MyCalculator created");
+    }
+    @AfterEach
+    void tearDownMyCalculator(){
+        myCalculator=null;
+        System.out.println("MyCalculator=null”. (tearDownMyCalculator())");
+    }
+
     @Test
     void add() {
 
