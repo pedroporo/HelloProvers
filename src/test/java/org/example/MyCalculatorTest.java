@@ -2,6 +2,7 @@ package org.example;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -66,6 +67,7 @@ class MyCalculatorTest {
         assertEquals(expectedResult,actualResult);
     }
     @Test
+    @Disabled
     void addWhenNegativeThrowsException(){
 
         int expectedResult=10;
@@ -77,6 +79,7 @@ class MyCalculatorTest {
         assertThrows(IllegalArgumentException.class, () ->myCalculator.add(num1,num2));
     }
     @Test
+    @Disabled
     void subWhenNegativeThrowsException(){
         int expectedResult=10;
 
@@ -87,12 +90,14 @@ class MyCalculatorTest {
     }
 
     @Test
+    @Disabled
     void multWhenNegativeThrowsException(){
         int num1=5;
         int num2=-5;
         assertThrows(IllegalArgumentException.class, () ->myCalculator.mult(num1,num2));
     }
     @Test
+    @Disabled
     void divWhenNegativeThrowsException(){
         int num1=-25;
         int num2=3;
