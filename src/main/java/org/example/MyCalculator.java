@@ -12,6 +12,9 @@ public class MyCalculator {
         return a*b;
     }
     public int div(int a,int b) {
+        if (b==0){
+            throw new ArithmeticException("Division Por Cero");
+        }
         return a/b;
     }
 }

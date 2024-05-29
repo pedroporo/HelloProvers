@@ -47,4 +47,10 @@ class MyCalculatorTest {
         int actualResult=myCalculator.div(25,5);
         assertEquals(expectedResult,actualResult);
     }
+    @Test
+    void divByZero() {
+        int expectedResult=5;
+        int actualResult=myCalculator.div(25,0);
+        assertEquals(expectedResult,actualResult);
+    }
 }
